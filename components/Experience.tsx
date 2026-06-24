@@ -11,13 +11,13 @@ type Job = {
 
 const jobs: Job[] = [
   {
-    role: "Consultor de Vendas",
+    role: "Vendedor",
     company: "Evolution Store",
     period: "2026 — Presente",
     points: [
-      "Meu trabalho atual: atendo os clientes, apresento os produtos e conduzo a negociação até o fechamento.",
-      "Foco em entender o que cada cliente precisa para oferecer a melhor opção e fechar com segurança.",
-      "Cuido do pós-venda para manter o cliente satisfeito, voltar a comprar e indicar.",
+      "Meu trabalho atual: atendimento presencial na loja, recebendo o cliente, apresentando os produtos e conduzindo a venda até o fechamento.",
+      "Foco em entender o que cada cliente procura para indicar a melhor opção e fechar com segurança.",
+      "Cuido do pós-venda para o cliente sair satisfeito, voltar a comprar e indicar a loja.",
     ],
   },
   {
