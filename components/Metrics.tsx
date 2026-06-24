@@ -9,7 +9,7 @@ const metrics = [
     value: 30,
     suffix: "%",
     label: "A mais de conversão",
-    sub: "foi o ganho no funil depois que reorganizei a pré-venda na IVB EdTech.",
+    sub: "foi o ganho de conversão que ajudei a entregar como consultor de vendas na IVB EdTech.",
   },
   {
     value: 100,

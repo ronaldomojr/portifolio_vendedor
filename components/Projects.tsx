@@ -5,14 +5,14 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    name: "Pré-vendedor digital",
+    name: "Venda de agentes de IA",
     org: "IVB EdTech",
     logo: "/logos/ivbedtech.jpeg",
     concept:
-      "Um atendimento no WhatsApp para fazer o primeiro contato com quem chega interessado, antes do vendedor entrar na conversa.",
+      "Atuei como consultor de vendas de um produto de ticket alto: agentes de inteligência artificial para empresas.",
     impact:
-      "Ele faz as perguntas iniciais, separa quem tem perfil de compra e me entrega o cliente já com o contexto na mão. O cliente não espera para ser atendido e eu chego na conversa pronto para fechar.",
-    tags: ["Qualificação", "Atendimento", "Agendamento"],
+      "Prospectei clientes ativamente, expliquei o valor de uma tecnologia nova para quem nunca tinha comprado algo assim e conduzi a negociação até o fechamento. Vender produto caro exige confiança, e é aí que eu me destaco.",
+    tags: ["Ticket alto", "Prospecção ativa", "Produto de tecnologia"],
   },
   {
     name: "Loja de informática",

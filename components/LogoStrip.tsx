@@ -6,30 +6,39 @@ const logos = [
   { src: "/logos/evolution.jpg", alt: "Evolution Store" },
 ];
 
-export default function LogoStrip() {
-  const row = [...logos, ...logos, ...logos, ...logos];
-
+function Track() {
   return (
-    <section className="border-y border-white/10 bg-surface/40 py-10">
-      <p className="mb-7 text-center text-xs font-medium uppercase tracking-[0.2em] text-muted">
+    <ul className="flex shrink-0 items-center gap-6 px-3">
+      {logos.map((logo, i) => (
+        <li
+          key={i}
+          className="flex h-20 w-40 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-white p-4 shadow-lg shadow-black/30 transition-transform hover:scale-105"
+        >
+          <Image
+            src={logo.src}
+            alt={logo.alt}
+            width={160}
+            height={80}
+            className="max-h-12 w-auto object-contain"
+          />
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+export default function LogoStrip() {
+  return (
+    <section className="border-y border-white/10 bg-surface/40 py-12">
+      <p className="mb-8 text-center text-xs font-medium uppercase tracking-[0.2em] text-muted">
         Marcas e iniciativas onde construí resultados
       </p>
-      <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_12%,black_88%,transparent)]">
-        <div className="flex w-max animate-marquee items-center gap-16 pr-16">
-          {row.map((logo, i) => (
-            <div
-              key={i}
-              className="flex h-14 w-32 shrink-0 items-center justify-center grayscale transition hover:grayscale-0"
-            >
-              <Image
-                src={logo.src}
-                alt={logo.alt}
-                width={128}
-                height={56}
-                className="max-h-14 w-auto object-contain opacity-80"
-              />
-            </div>
-          ))}
+      <div className="group relative flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+        <div className="marquee flex items-center group-hover:[animation-play-state:paused]">
+          <Track />
+          <Track />
+          <Track />
+          <Track />
         </div>
       </div>
     </section>
