@@ -36,6 +36,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# arquivos de contexto/origem (não vão para o deploy — assets já estão em /public)
+/arquivos/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
