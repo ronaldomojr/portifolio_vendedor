@@ -66,23 +66,12 @@ export default function Experience() {
                     {job.period}
                   </span>
                 </div>
-                <ul className="mt-4 flex flex-col gap-2.5">
-                  {job.points.map((p, j) => (
-                    <li
-                      key={j}
-                      className="flex gap-3 text-sm leading-relaxed text-muted"
-                    >
-                      <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-brand-bright" />
-                      {p}
-                    </li>
-                  ))}
-                </ul>
                 {job.letter && (
                   <a
                     href={job.letter.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group/btn mt-5 inline-flex items-center gap-2 rounded-full border border-brand/40 bg-brand/10 px-4 py-2 text-sm font-medium text-brand-bright transition-all hover:bg-brand hover:text-white"
+                    className="group/btn mt-4 inline-flex items-center gap-2 rounded-full bg-brand px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-brand/30 transition-all hover:bg-brand-bright hover:shadow-brand/50"
                   >
                     <svg
                       width="15"
@@ -104,6 +93,17 @@ export default function Experience() {
                     </span>
                   </a>
                 )}
+                <ul className="mt-4 flex flex-col gap-2.5">
+                  {job.points.map((p, j) => (
+                    <li
+                      key={j}
+                      className="flex gap-3 text-sm leading-relaxed text-muted"
+                    >
+                      <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-brand-bright" />
+                      {p}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </Reveal>
           ))}

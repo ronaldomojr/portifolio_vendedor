@@ -110,9 +110,3 @@ html.lenis body {
 .glow-red {
   box-shadow: 0 0 60px -15px rgba(204, 0, 0, 0.55);
 }
-
-@media (prefers-reduced-motion: reduce) {
-  .marquee {
-    animation: none;
-  }
-}
