@@ -24,6 +24,16 @@ const projects = [
       "Aprendi na prática a precificar para vender, montar ofertas que convertem, tirar dúvidas técnicas no chat e cuidar do pós-venda para o cliente voltar a comprar e indicar.",
     tags: ["Precificação", "Atendimento técnico", "Pós-venda"],
   },
+  {
+    name: "Evolution Store",
+    org: "Loja física · Vendedor",
+    logo: "/logos/evolution.jpg",
+    concept:
+      "Onde trabalho hoje: atendimento presencial no varejo, recebendo o cliente e fechando a venda na loja.",
+    impact:
+      "No presencial a venda é na confiança e na leitura do cliente. Recebo, entendo o que a pessoa procura, apresento as opções e conduzo até o fechamento — cuidando do pós-venda para ela voltar e indicar.",
+    tags: ["Varejo presencial", "Atendimento", "Fechamento"],
+  },
 ];
 
 export default function Projects() {
@@ -46,7 +56,7 @@ export default function Projects() {
           </h2>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:mx-auto lg:max-w-4xl">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((p, i) => (
             <motion.article
               key={p.name}
