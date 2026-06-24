@@ -33,7 +33,7 @@
 }
 
 .marquee {
-  animation: marquee 22s linear infinite;
+  animation: marquee 45s linear infinite;
   will-change: transform;
 }
 

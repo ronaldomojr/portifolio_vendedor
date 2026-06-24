@@ -6,13 +6,18 @@ const logos = [
   { src: "/logos/evolution.jpg", alt: "Evolution Store" },
 ];
 
-function Track() {
+// Repete as logos o suficiente para um grupo ficar mais largo que qualquer
+// tela — assim o loop translateX(-50%) emenda sem deixar espaço vazio.
+const REPEAT = 8;
+const groupLogos = Array.from({ length: REPEAT }).flatMap(() => logos);
+
+function Group() {
   return (
-    <ul className="flex shrink-0 items-center gap-5 px-2.5" aria-hidden="true">
-      {logos.map((logo, i) => (
-        <li
+    <div className="flex shrink-0 items-center" aria-hidden="true">
+      {groupLogos.map((logo, i) => (
+        <div
           key={i}
-          className="h-24 w-24 shrink-0 overflow-hidden rounded-2xl border border-white/10 ring-1 ring-inset ring-white/5 transition-transform duration-300 hover:scale-105 hover:ring-brand/40"
+          className="mr-5 h-24 w-24 shrink-0 overflow-hidden rounded-2xl border border-white/10 ring-1 ring-inset ring-white/5"
         >
           <Image
             src={logo.src}
@@ -21,9 +26,9 @@ function Track() {
             height={160}
             className="h-full w-full object-cover"
           />
-        </li>
+        </div>
       ))}
-    </ul>
+    </div>
   );
 }
 
@@ -34,11 +39,9 @@ export default function LogoStrip() {
         Marcas e iniciativas onde construí resultados
       </p>
       <div className="group relative flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
-        <div className="marquee flex items-center group-hover:[animation-play-state:paused]">
-          <Track />
-          <Track />
-          <Track />
-          <Track />
+        <div className="marquee flex w-max group-hover:[animation-play-state:paused]">
+          <Group />
+          <Group />
         </div>
       </div>
     </section>
