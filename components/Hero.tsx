@@ -125,12 +125,12 @@ export default function Hero() {
           <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-tr from-brand/40 to-transparent blur-2xl" />
           <div className="glow-red overflow-hidden rounded-[1.75rem] border border-white/10">
             <Image
-              src="/images/ronaldo.jpeg"
+              src="/images/ronaldo-hero.jpeg"
               alt="Ronaldo Medeiros — Consultor de Vendas"
-              width={640}
-              height={800}
+              width={500}
+              height={720}
               priority
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover object-top"
             />
           </div>
           {/* Floating badge */}
